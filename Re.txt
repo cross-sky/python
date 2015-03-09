@@ -1,4 +1,4 @@
-__author__ = 'apple'
+﻿__author__ = 'apple'
 import os, re, datetime
 
 filename = "e:\outout_1981.10.21.txt"
@@ -25,5 +25,5 @@ os.rename(filename,"e:\output_"+year+"-"+month+"-"+day+"-"+str(wd)+".txt")
 
 '''
 re,os,datetime
-groupȺ
+group群
 '''
