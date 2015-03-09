@@ -1,0 +1,29 @@
+__author__ = 'apple'
+import os, re, datetime
+
+filename = "e:\outout_1981.10.21.txt"
+if os.path.exists(filename) == False:
+    print(filename,"file make!")
+    fp = open(filename,'w+')
+    fp.close()
+
+getTime = re.search("(?P<year>\d{4})\.(?P<month>\d{2})\.(?P<day>\d{2})\.",filename)
+print(getTime,str(getTime))
+year = getTime.group("year")
+month = getTime.group("month")
+day = getTime.group("day")
+
+date = datetime.date(int(year),int(month),int(day))
+
+wd = date.weekday() + 1
+
+os.rename(filename,"e:\output_"+year+"-"+month+"-"+day+"-"+str(wd)+".txt")
+
+#if os.path.exists(filename) == True
+#    print("already fix name")
+#    quit()
+
+'''
+re,os,datetime
+groupȺ
+'''
